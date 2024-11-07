@@ -26,6 +26,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "circular_countdown_timer",
+      "rootUri": "file:///C:/Users/Amjad/AppData/Local/Pub/Cache/hosted/pub.dev/circular_countdown_timer-0.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///C:/Users/Amjad/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
@@ -242,7 +248,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-11-07T09:59:12.816523Z",
+  "generated": "2024-11-07T13:59:54.869089Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///C:/flutter_windows_3.22.2-stable/flutter",
