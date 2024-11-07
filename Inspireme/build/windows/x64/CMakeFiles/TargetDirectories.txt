@@ -8,3 +8,10 @@ C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/flutt
 C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/CMakeFiles/inspire.dir
 C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/CMakeFiles/INSTALL.dir
 C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/plugins/firebase_auth/CMakeFiles/firebase_auth_plugin.dir
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/plugins/firebase_auth/CMakeFiles/INSTALL.dir
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/plugins/firebase_auth/CMakeFiles/ALL_BUILD.dir
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/plugins/firebase_core/CMakeFiles/firebase_core_plugin.dir
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/plugins/firebase_core/CMakeFiles/INSTALL.dir
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/plugins/firebase_core/CMakeFiles/ALL_BUILD.dir
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/plugins/firebase_core/bin/CMakeFiles/INSTALL.dir

@@ -1,5 +1,7 @@
 C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/Debug/data/icudtl.dat
 C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/Debug/flutter_windows.dll
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/Debug/firebase_auth_plugin.lib
+C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/Debug/firebase_core_plugin.lib
 C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
 C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
 C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
