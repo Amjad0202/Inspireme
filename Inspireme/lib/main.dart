@@ -16,6 +16,7 @@ class InspireMeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'InspireMe',
+      debugShowCheckedModeBanner: false,  // This removes the debug banner
       theme: AppTheme.lightTheme,
       home: const MainScreen(),
     );

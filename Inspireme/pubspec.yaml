@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   firebase_auth: ^5.3.1
   circular_countdown_timer: ^0.2.4
+  fl_chart: ^0.69.0
 
 dev_dependencies:
   flutter_test:
