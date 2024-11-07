@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 
 class MeditationScreen extends StatefulWidget {
+  const MeditationScreen({super.key});
+
   @override
   _MeditationScreenState createState() => _MeditationScreenState();
 }
@@ -13,7 +15,7 @@ class _MeditationScreenState extends State<MeditationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Meditation')),
+      appBar: AppBar(title: const Text('Meditation')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

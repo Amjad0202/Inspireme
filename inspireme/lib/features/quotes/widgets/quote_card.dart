@@ -7,11 +7,11 @@ class QuoteCard extends StatelessWidget {
   final Function() onShare;
 
   const QuoteCard({
-    Key? key,
+    super.key,
     required this.quote,
     required this.onLike,
     required this.onShare,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

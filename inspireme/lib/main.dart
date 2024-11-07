@@ -10,7 +10,7 @@ void main() async {
 }
 
 class InspireMeApp extends StatelessWidget {
-  const InspireMeApp({Key? key}) : super(key: key);
+  const InspireMeApp({super.key});
 
   @override
   Widget build(BuildContext context) {

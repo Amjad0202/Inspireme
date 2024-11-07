@@ -3,20 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class MoodCalendarScreen extends StatefulWidget {
+  const MoodCalendarScreen({super.key});
+
   @override
   _MoodCalendarScreenState createState() => _MoodCalendarScreenState();
 }
 
 class _MoodCalendarScreenState extends State<MoodCalendarScreen> {
-  CalendarFormat _calendarFormat = CalendarFormat.month;
-  DateTime _focusedDay = DateTime.now();
+  final CalendarFormat _calendarFormat = CalendarFormat.month;
+  final DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
-  Map<DateTime, MoodEntry> _moodEntries = {};
+  final Map<DateTime, MoodEntry> _moodEntries = {};
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Mood Tracker')),
+      appBar: AppBar(title: const Text('Mood Tracker')),
       body: Column(
         children: [
           TableCalendar(
@@ -43,7 +45,7 @@ class _MoodCalendarScreenState extends State<MoodCalendarScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _showMoodDialog(_focusedDay),
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -73,7 +75,7 @@ class _MoodCalendarScreenState extends State<MoodCalendarScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('How are you feeling?'),
+        title: const Text('How are you feeling?'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
