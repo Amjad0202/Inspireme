@@ -1,6 +1,6 @@
-^C:\USERS\AMJAD\PROJECTS\FLUTTER_APPS\INSPIRE\BUILD\WINDOWS\X64\CMAKEFILES\E3D24B45B46F307EF59321BA17F1A6C5\FLUTTER_WINDOWS.DLL.RULE
+^C:\USERS\AMJAD\PROJECTS\FLUTTER_APPS\INSPIREME\INSPIREME\BUILD\WINDOWS\X64\CMAKEFILES\BD6A2D8B037694C2F650EDDC7ECBB35D\FLUTTER_WINDOWS.DLL.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter_windows_3.22.2-stable\flutter PROJECT_DIR=C:\Users\Amjad\Projects\flutter_apps\inspire FLUTTER_ROOT=C:\flutter_windows_3.22.2-stable\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\Amjad\Projects\flutter_apps\inspire\windows\flutter\ephemeral PROJECT_DIR=C:\Users\Amjad\Projects\flutter_apps\inspire FLUTTER_TARGET=C:\Users\Amjad\Projects\flutter_apps\inspire\lib\main.dart DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\Amjad\Projects\flutter_apps\inspire\.dart_tool\package_config.json C:/flutter_windows_3.22.2-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter_windows_3.22.2-stable\flutter PROJECT_DIR=C:\Users\Amjad\Projects\flutter_apps\Inspireme\Inspireme FLUTTER_ROOT=C:\flutter_windows_3.22.2-stable\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\Amjad\Projects\flutter_apps\Inspireme\Inspireme\windows\flutter\ephemeral PROJECT_DIR=C:\Users\Amjad\Projects\flutter_apps\Inspireme\Inspireme FLUTTER_TARGET=C:\Users\Amjad\Projects\flutter_apps\Inspireme\Inspireme\lib\main.dart DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\Amjad\Projects\flutter_apps\Inspireme\Inspireme\.dart_tool\package_config.json C:/flutter_windows_3.22.2-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -8,7 +8,7 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\AMJAD\PROJECTS\FLUTTER_APPS\INSPIRE\BUILD\WINDOWS\X64\CMAKEFILES\E25D6948B5DFDC8D42AC936210E6F271\FLUTTER_ASSEMBLE.RULE
+^C:\USERS\AMJAD\PROJECTS\FLUTTER_APPS\INSPIREME\INSPIREME\BUILD\WINDOWS\X64\CMAKEFILES\774C43643A90C4F17E23710E2469E86E\FLUTTER_ASSEMBLE.RULE
 setlocal
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -16,9 +16,9 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\AMJAD\PROJECTS\FLUTTER_APPS\INSPIRE\WINDOWS\FLUTTER\CMAKELISTS.TXT
+^C:\USERS\AMJAD\PROJECTS\FLUTTER_APPS\INSPIREME\INSPIREME\WINDOWS\FLUTTER\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Amjad/Projects/flutter_apps/inspire/windows -BC:/Users/Amjad/Projects/flutter_apps/inspire/build/windows/x64 --check-stamp-file C:/Users/Amjad/Projects/flutter_apps/inspire/build/windows/x64/flutter/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/windows -BC:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64 --check-stamp-file C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/flutter/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

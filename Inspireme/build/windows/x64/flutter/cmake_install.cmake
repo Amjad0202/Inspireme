@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Amjad/Projects/flutter_apps/inspire/windows/flutter
+# Install script for directory: C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/windows/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

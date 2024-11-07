@@ -1,6 +1,6 @@
-^C:\USERS\AMJAD\PROJECTS\FLUTTER_APPS\INSPIRE\BUILD\WINDOWS\X64\CMAKEFILES\964B21A7FAD77530B0605683557DB769\GENERATE.STAMP.RULE
+^C:\USERS\AMJAD\PROJECTS\FLUTTER_APPS\INSPIREME\INSPIREME\BUILD\WINDOWS\X64\CMAKEFILES\CEC933AF23569A66CBA2665D9BE6C75D\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Amjad/Projects/flutter_apps/inspire/windows -BC:/Users/Amjad/Projects/flutter_apps/inspire/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Amjad/Projects/flutter_apps/inspire/build/windows/x64/inspire.sln
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/windows -BC:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Amjad/Projects/flutter_apps/Inspireme/Inspireme/build/windows/x64/inspire.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

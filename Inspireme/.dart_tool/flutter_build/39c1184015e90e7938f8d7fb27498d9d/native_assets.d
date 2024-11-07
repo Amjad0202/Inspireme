@@ -1,1 +1,0 @@
- C:\\Users\\Amjad\\Projects\\flutter_apps\\inspire\\.dart_tool\\flutter_build\\39c1184015e90e7938f8d7fb27498d9d\\native_assets.yaml: 
