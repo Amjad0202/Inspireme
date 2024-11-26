@@ -4,9 +4,10 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-<p align="center">
-  <img src="/api/placeholder/800/400" alt="Inspireme App Banner">
-</p>
+
+ ![logo-png](https://github.com/user-attachments/assets/18755d33-ebea-4d6b-82f0-ecc68607843a)
+
+
 
 ## 🎯 About
 
@@ -71,11 +72,18 @@ flutter run
 
 ## 📱 Screenshots
 
-<p align="center">
-  <img src="/api/placeholder/200/400" alt="Home Screen">
-  <img src="/api/placeholder/200/400" alt="Meditation Screen">
-  <img src="/api/placeholder/200/400" alt="Progress Screen">
-</p>
+![image](https://github.com/user-attachments/assets/80987434-03c0-454c-a615-47c73a183137)
+![image](https://github.com/user-attachments/assets/e8af8728-3952-4089-a289-3c72dbeaf6ca)
+![image](https://github.com/user-attachments/assets/90d98fa4-ecb4-48d1-97bc-7f0ff0dd2a78)
+![image](https://github.com/user-attachments/assets/f44ecc67-cc21-496c-b4ca-cfe26cd43b5c)
+
+
+
+
+
+
+
+
 
 ## 🛠️ Built With
 
@@ -133,7 +141,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email support@inspireme.com or join our Slack channel.
+For support, mamamjadali@gmail.com or join our Slack channel.
 
 ## 🔮 Roadmap
 
