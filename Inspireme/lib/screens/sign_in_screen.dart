@@ -22,11 +22,11 @@ class _SignInScreenState extends State<SignInScreen> {
 
 
 
-  Widget _buildBackground() {
+    Widget _buildBackground() {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/background.jpg'),
+          image: AssetImage('assets/images/background.jpg'), // Updated path
           fit: BoxFit.cover,
         ),
       ),
