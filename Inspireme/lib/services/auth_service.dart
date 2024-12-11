@@ -3,7 +3,6 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:inspire/models/wellness_activity.dart';
 
 class AuthService {
@@ -57,7 +56,7 @@ class WellnessCard extends StatelessWidget {
             const SizedBox(height: 16),
             ...activities.map((activity) => 
               _buildActivityTile(activity)
-            ).toList(),
+            ),
           ],
         ),
       ),

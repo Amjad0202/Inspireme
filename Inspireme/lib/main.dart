@@ -4,6 +4,8 @@ import 'screens/home_screen.dart';
 import 'screens/mindfulness_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/progress_screen.dart';
+import 'screens/sign_in_screen.dart';
+import 'screens/welcome_screen.dart';
 
 void main() {
   runApp(const InspireMeApp());
@@ -16,9 +18,14 @@ class InspireMeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'InspireMe',
-      debugShowCheckedModeBanner: false,  // This removes the debug banner
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: const MainScreen(),
+      initialRoute: '/sign-in',
+      routes: {
+        '/sign-in': (context) => const SignInScreen(),
+        '/welcome': (context) => const WelcomeScreen(),
+        '/main': (context) => const MainScreen(),
+      },
     );
   }
 }

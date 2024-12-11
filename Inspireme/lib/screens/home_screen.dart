@@ -1,7 +1,5 @@
 // lib/screens/home_screen.dart
 import 'package:flutter/material.dart';
-import '../widgets/daily_quote_widget.dart';
-import '../widgets/wellness_tracker_widget.dart';
 
 
 

@@ -231,7 +231,7 @@ class ProgressScreen extends StatelessWidget {
         Container(
           height: 200,
           color: Colors.blue.withOpacity(0.1),
-          child: Center(
+          child: const Center(
             child: Text('Mood Trends Chart Placeholder'),
           ),
         ),

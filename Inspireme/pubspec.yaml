@@ -38,6 +38,7 @@ dependencies:
   firebase_auth: ^5.3.1
   circular_countdown_timer: ^0.2.4
   fl_chart: ^0.69.0
+  animate_do: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +56,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+
+   
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
