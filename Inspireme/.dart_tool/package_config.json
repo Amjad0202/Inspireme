@@ -9,9 +9,9 @@
     },
     {
       "name": "animate_do",
-      "rootUri": "file:///C:/Users/Amjad/AppData/Local/Pub/Cache/hosted/pub.dev/animate_do-2.1.0",
+      "rootUri": "file:///C:/Users/Amjad/AppData/Local/Pub/Cache/hosted/pub.dev/animate_do-3.3.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.1"
     },
     {
       "name": "async",
@@ -266,7 +266,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-12-11T17:26:51.039327Z",
+  "generated": "2024-12-12T04:32:25.351305Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///C:/flutter_windows_3.22.2-stable/flutter",

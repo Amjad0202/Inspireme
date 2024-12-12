@@ -1,7 +1,7 @@
 // lib/screens/home_screen.dart
 import 'package:flutter/material.dart';
-
-
+import 'package:circular_countdown_timer/circular_countdown_timer.dart';
+import 'dart:ui';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,6 +13,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
+  final CountDownController _timerController = CountDownController();
+  String _selectedMood = '';
+  final _journalController = TextEditingController();
 
   @override
   void initState() {
@@ -30,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   @override
   void dispose() {
     _controller.dispose();
+    _journalController.dispose();
     super.dispose();
   }
 
@@ -207,40 +211,32 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           'Meditation',
           Icons.self_improvement,
           Colors.purple,
-          () {},
+          () => _showMeditationDialog(),
         ),
         _buildActionCard(
           'Journal',
           Icons.book,
           Colors.orange,
-          () {},
+          () => _showJournalDialog(),
         ),
       ],
     );
   }
 
-  Widget _buildActionCard(
-    String title,
-    IconData icon,
-    Color color,
-    VoidCallback onTap,
-  ) {
-    return InkWell(
+  Widget _buildActionCard(String title, IconData icon, Color color, VoidCallback onTap) {
+    return GestureDetector(
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: color.withOpacity(0.1),
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            color: color.withOpacity(0.3),
-          ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: 32, color: color),
-            const SizedBox(height: 8),
+            Icon(icon, size: 48, color: color),
+            const SizedBox(height: 16),
             Text(
               title,
               style: TextStyle(
@@ -251,6 +247,204 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  void _showMeditationDialog() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => Container(
+        height: MediaQuery.of(context).size.height * 0.8,
+        decoration: BoxDecoration(
+          color: Theme.of(context).scaffoldBackgroundColor,
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+        ),
+        child: Column(
+          children: [
+            const SizedBox(height: 20),
+            Text(
+              'Meditation Timer',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            const SizedBox(height: 30),
+            CircularCountDownTimer(
+              duration: 300,
+              initialDuration: 0,
+              controller: _timerController,
+              width: MediaQuery.of(context).size.width * 0.6,
+              height: MediaQuery.of(context).size.width * 0.6,
+              ringColor: Colors.grey[300]!,
+              fillColor: Colors.purple[100]!,
+              backgroundColor: Colors.white,
+              strokeWidth: 15.0,
+              strokeCap: StrokeCap.round,
+              textStyle: Theme.of(context).textTheme.headlineMedium,
+              textFormat: CountdownTextFormat.MM_SS,
+              isReverse: true,
+              isReverseAnimation: true,
+              onComplete: () {
+                _showCompletionDialog('Meditation');
+              },
+            ),
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () => _timerController.start(),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  ),
+                  child: const Text('Start'),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () => _timerController.pause(),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  ),
+                  child: const Text('Pause'),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () => _timerController.reset(),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  ),
+                  child: const Text('Reset'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showJournalDialog() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => Padding(
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: Container(
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+          ),
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'How are you feeling?',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: 20),
+              _buildMoodSelector(),
+              const SizedBox(height: 20),
+              TextField(
+                controller: _journalController,
+                maxLines: 4,
+                decoration: InputDecoration(
+                  hintText: 'Write your thoughts...',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  filled: true,
+                  fillColor: Colors.grey[50],
+                ),
+              ),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    _saveJournalEntry();
+                    Navigator.pop(context);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: const Text('Save Entry'),
+                ),
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMoodSelector() {
+    final moods = {
+      '😊': 'Happy',
+      '😔': 'Sad',
+      '😌': 'Calm',
+      '😤': 'Angry',
+      '😰': 'Anxious',
+    };
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: moods.entries.map((entry) => 
+        GestureDetector(
+          onTap: () => setState(() => _selectedMood = entry.value),
+          child: Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: _selectedMood == entry.value 
+                ? Colors.orange.withOpacity(0.2)
+                : Colors.transparent,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Text(
+              entry.key,
+              style: const TextStyle(fontSize: 32),
+            ),
+          ),
+        ),
+      ).toList(),
+    );
+  }
+
+  void _saveJournalEntry() {
+    // TODO: Implement journal entry saving
+    // This is where you would save the entry to your database
+    final entry = {
+      'mood': _selectedMood,
+      'text': _journalController.text,
+      'timestamp': DateTime.now(),
+    };
+    print('Saving journal entry: $entry');
+    _journalController.clear();
+    _selectedMood = '';
+  }
+
+  void _showCompletionDialog(String activity) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('$activity Complete!'),
+        content: Text('Great job completing your $activity session.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Close'),
+          ),
+        ],
       ),
     );
   }
